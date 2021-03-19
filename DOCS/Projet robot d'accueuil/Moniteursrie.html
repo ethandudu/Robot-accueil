@@ -1,0 +1,157 @@
+﻿<html>
+	
+<head>
+	<title>Moniteur s&eacute;rie</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta name="generator" content="HelpNDoc Personal Edition 3.7.0.456">
+	<link type="text/css" rel="stylesheet" media="all" href="css/reset.css" />
+	<link type="text/css" rel="stylesheet" media="all" href="css/base.css" />
+	<link type="text/css" rel="stylesheet" media="all" href="css/hnd.css" />
+	<!--[if lte IE 8]>
+		<link type="text/css" rel="stylesheet" media="all" href="css/ielte8.css" />
+	<![endif]-->
+	<style type="text/css">
+		#topic_header
+		{
+			background-color: #EFEFEF;
+		}
+	</style>
+	<script type="text/javascript" src="js/jquery.min.js"></script>
+	<script type="text/javascript" src="js/hnd.js"></script>
+	<script type="text/javascript">
+		if (top.frames.length == 0)
+		{
+			var sTopicUrl = top.location.href.substring(top.location.href.lastIndexOf("/") + 1, top.location.href.length);
+			top.location.href = "Projet robot d'accueuil.html?" + sTopicUrl;
+		}
+		else if (top && top.FrameTOC && top.FrameTOC.SelectTocItem)
+		{
+			top.FrameTOC.SelectTocItem("Moniteursrie");
+		}
+	</script>
+</head>
+
+<body>
+
+	<div id="topic_header">
+			<div id="topic_header_content">
+				<h1>Moniteur s&eacute;rie</h1>
+				
+				<div id="topic_breadcrumb">
+					<a href="Ressources.html">Ressources</a> &rsaquo;&rsaquo; <a href="RessourcesArduino.html">Ressources Arduino</a> &rsaquo;&rsaquo; </div>
+				</div>
+			<div id="topic_header_nav">
+				<a href="RessourcesArduino.html"><img src="img/arrow_up.png" alt="Parent"/></a>
+				
+				<a href="matrisepositions.html"><img src="img/arrow_left.png" alt="Previous"/></a>
+				
+				<a href="Nouveauchapitre2.html"><img src="img/arrow_right.png" alt="Next"/></a>
+				
+				</div>
+			<div class="clear"></div>
+		</div>
+	<div id="topic_content">
+		
+<p></p>
+<div class="rvps1"><table width="100%" border="1" cellpadding="0" cellspacing="0" style="border-width: 0px;">
+<tr valign="top">
+<td style="border-width : 1px; border-color: #000000; border-style: solid; border-top: none; border-right: none; border-bottom: none; border-left: none;"><p class="rvps1"><span class="rvts6"><br/></span></p>
+<p class="rvps1"><span class="rvts6"><br/></span></p>
+<p class="rvps1"><img alt="" style="padding : 1px;" src="lib/NouvelElement32.png"/></p>
+</td>
+</tr>
+<tr valign="top">
+<td style="border-width : 1px; border-color: #666699; border-style: solid; border-top: none; border-right: none; border-bottom: none; border-left: none;"><p class="rvps3"><span class="rvts7">Moniteur série</span></p>
+</td>
+</tr>
+</table>
+</div>
+<p class="rvps23"><span class="rvts9">Cette ressource va permettre d'afficher un message sur le PC indiquant un état donné de la carte.</span></p>
+<p class="rvps23"><span class="rvts9"><br/></span></p>
+<p class="rvps1"><span class="rvts23"><br/></span></p>
+<ul style="text-indent: 0px; margin-left: 67px; list-style-position: outside;">
+<li class="rvps23" style="margin-left: 0; text-indent: 0px"><span class="rvts96">UTILISATION DU MONITEUR SERIE</span></li>
+</ul>
+<p class="rvps18"><span class="rvts76">Exemple 1&nbsp;: afficher un texte</span></p>
+<div class="rvps27"><table border="1" cellpadding="4" cellspacing="-1" style="border-width: 0px; border-collapse: collapse;">
+<tr valign="top">
+<td valign="top" style="border-width : 1px; border-color: #000000; border-style: solid; width: 600px;"><p class="rvps18"><span class="rvts103">/*</span></p>
+<p class="rvps18"><span class="rvts103"> Affichage d'un message type texte sur le moniteur série &nbsp;"bonjour" </span></p>
+<p class="rvps18"><span class="rvts103">*/</span></p>
+<p class="rvps18"><span class="rvts103">void setup() {</span></p>
+<p class="rvps18"><span class="rvts103">Serial.begin(9600); // paramétrage de le vitesse en bit/seconde, &nbsp;mettre majuscule a Serial</span></p>
+<p class="rvps18"><span class="rvts103">}</span></p>
+<p class="rvps18"><span class="rvts103">void loop() {</span></p>
+<p class="rvps18"><span class="rvts103"> &nbsp;Serial.print("bonjour"); // affichage du texte entre guillemets</span></p>
+<p class="rvps18"><span class="rvts103"> }</span></p>
+</td>
+</tr>
+</table>
+</div>
+<p class="rvps18"><span class="rvts104"><br/></span></p>
+<p class="rvps18"><span class="rvts77">Lancer le moniteur série (deux méthodes au choix)</span></p>
+<p class="rvps21"><img width="599" height="170" alt="" style="padding : 1px;" src="lib/NouvelElement35.png"/></p>
+<p class="rvps18"><span class="rvts106">Commentaire&nbsp;sur le fonctionnement obtenu</span><span class="rvts105"> le mot «&nbsp;bonjour&nbsp;» défile sans cesse… pas facile de lire</span></p>
+<p class="rvps18"><span class="rvts105">.</span><img alt="" style="padding : 1px;" src="lib/NouvelElement37.png"/></p>
+<p class="rvps18"><span class="rvts76">Exemple 2&nbsp;: utilisation de "serialprintln".</span></p>
+<div class="rvps27"><table border="1" cellpadding="4" cellspacing="-1" style="border-width: 0px; border-collapse: collapse;">
+<tr valign="top">
+<td valign="top" style="border-width : 1px; border-color: #000000; border-style: solid; width: 600px;"><p class="rvps18"><span class="rvts103">/*</span></p>
+<p class="rvps18"><span class="rvts103"> &nbsp;Utilisation de Serialprintln.</span></p>
+<p class="rvps18"><span class="rvts103"> &nbsp;Affichage d'un message type texte sur le moniteur serie "bonjour"Controle d'un servo moteur à partir d'un potentiomètre</span></p>
+<p class="rvps18"><span class="rvts103"> */</span></p>
+<p class="rvps18"><span class="rvts103">void setup() {</span></p>
+<p class="rvps18"><span class="rvts103">Serial.begin(9600); // paramétrage de le vitesse en bit/seconde, &nbsp;mettre majuscule a Serial</span></p>
+<p class="rvps18"><span class="rvts103">}</span></p>
+<p class="rvps18"><span class="rvts103">void loop() {</span></p>
+<p class="rvps18"><span class="rvts103"> &nbsp;Serial.println("bonjour"); // affichage du texte entre guillemets</span></p>
+<p class="rvps18"><span class="rvts103"> }</span></p>
+</td>
+</tr>
+</table>
+</div>
+<p class="rvps27"><span class="rvts77"><br/></span></p>
+<p class="rvps18"><span class="rvts77">Lancer le moniteur série.</span></p>
+<p class="rvps18"><span class="rvts105">Commentaire&nbsp;le mot «&nbsp;bonjour&nbsp;» s'affiche sur une colonne.</span></p>
+<p class="rvps21"><img alt="" style="padding : 1px;" src="lib/NouvelElement38.png"/></p>
+<p class="rvps21"><span class="rvts105"><br/></span></p>
+<p class="rvps18"><span class="rvts76">Exemple 3&nbsp;: utilisation de serialprintln affichage sur deux colonnes (texte et valeur)</span></p>
+<p class="rvps29"><span class="rvts107">Un potentiomètre est raccordé sur A</span><span class="rvts70">0</span></p>
+<p class="rvps29"><span class="rvts70"><br/></span></p>
+<div class="rvps27"><table border="1" cellpadding="4" cellspacing="-1" style="border-width: 0px; border-collapse: collapse;">
+<tr valign="top">
+<td valign="top" style="border-width : 1px; border-color: #000000; border-style: solid; width: 600px;"><p class="rvps18"><span class="rvts103">/*</span></p>
+<p class="rvps18"><span class="rvts103"> &nbsp;Utilisation de Serialprintln.</span></p>
+<p class="rvps18"><span class="rvts103"> &nbsp;Capteur branché sur entrée A0</span></p>
+<p class="rvps18"><span class="rvts103"> &nbsp;on affiche sa valeur avec texte légende de 0 à 1023</span></p>
+<p class="rvps18"><span class="rvts103"> */</span></p>
+<p class="rvps18"><span class="rvts103">void setup() {</span></p>
+<p class="rvps18"><span class="rvts103">Serial.begin(9600); // paramétrage de le vitesse en bit/seconde, &nbsp;mettre majuscule a Serial</span></p>
+<p class="rvps18"><span class="rvts103">}</span></p>
+<p class="rvps18"><span class="rvts103">void loop() {</span></p>
+<p class="rvps18"><span class="rvts103"> &nbsp;int ValeurentreeanalogA0 = analogRead(A0);</span></p>
+<p class="rvps18"><span class="rvts103"> &nbsp; &nbsp;Serial.println(ValeurentreeanalogA0); &nbsp;// &nbsp;affichage de la valeur lue sur A0</span></p>
+<p class="rvps18"><span class="rvts103"> &nbsp;Serial.print("valeur du capteur sur A0: "); // affichage du texte entre guillemets }</span></p>
+<p class="rvps18"><span class="rvts108">}</span></p>
+</td>
+</tr>
+</table>
+</div>
+<p class="rvps27"><span class="rvts110"><br/></span></p>
+<p class="rvps18"><span class="rvts109">Commentaire</span><span class="rvts113">:</span><span class="rvts112">&nbsp;</span><span class="rvts110">le texte «&nbsp;valeur du capteur sur A0:</span><span class="rvts111">&nbsp;</span><span class="rvts110">» s'affiche suivi de la valeur de 0 à 1023 (fonction du potentiomètre).</span></p>
+<p class="rvps18"><span class="rvts110">Si on veut afficher un angle, une température,... il faudra faire un calcul pour avoir une conversion.</span></p>
+<p class="rvps21"><img alt="" style="padding : 1px;" src="lib/NouvelElement39.png"/></p>
+<p class="rvps27"><span class="rvts77"><br/></span></p>
+<p></p>
+<p class="rvps7"><span class="rvts14">Créé avec HelpNDoc Personal Edition: </span><a class="rvts15" href="http://www.helpndoc.com/fr">Générateur d'aides Web gratuit</a></p>
+</div>
+	
+	<div id="topic_footer">
+
+			<div id="topic_footer_content">
+				Copyright &copy; &lt;Dates&gt; by &lt;Authors&gt;. All Rights Reserved.</div>
+		</div>
+	</body>
+	
+</html>
+

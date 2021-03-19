@@ -1,0 +1,1231 @@
+﻿/* ========== Text Styles ========== */
+hr { color: #000000}
+body, table, span.rvts0 /* Normal text */
+{
+ font-size: 10pt;
+ font-family: 'Arial', 'Helvetica', sans-serif;
+ font-style: normal;
+ font-weight: normal;
+ color: #000000;
+ text-decoration: none;
+}
+span.rvts1 /* Heading */
+{
+ font-weight: bold;
+ color: #0000ff;
+}
+span.rvts2 /* Subheading */
+{
+ font-weight: bold;
+ color: #000080;
+}
+span.rvts3 /* Keywords */
+{
+ font-style: italic;
+ color: #800000;
+}
+a.rvts4, span.rvts4 /* Jump 1 */
+{
+ color: #008000;
+ text-decoration: underline;
+}
+a.rvts5, span.rvts5 /* Jump 2 */
+{
+ color: #008000;
+ text-decoration: underline;
+}
+span.rvts6 /* Font Style */
+{
+}
+span.rvts7
+{
+ font-size: 22pt;
+ font-family: 'Arial Rounded MT Bold';
+ font-weight: bold;
+ color: #ffffff;
+}
+span.rvts8
+{
+ font-size: 15pt;
+ font-family: 'calibri';
+ color: #ff0000;
+}
+span.rvts9
+{
+ font-size: 16pt;
+ font-family: 'calibri';
+ font-weight: bold;
+ color: #8b0000;
+}
+span.rvts10
+{
+ font-size: 15pt;
+ font-family: 'calibri';
+ font-style: italic;
+ color: #000000;
+}
+span.rvts11
+{
+ font-size: 14pt;
+ font-family: '@Arial Unicode MS';
+ color: #ff3333;
+}
+span.rvts12
+{
+ font-size: 14pt;
+ font-family: '@Arial Unicode MS';
+ color: #262626;
+}
+span.rvts13
+{
+ font-size: 14pt;
+ font-family: '@Arial Unicode MS';
+ font-weight: bold;
+ color: #262626;
+}
+span.rvts14 /* Font Style */
+{
+ font-family: 'Tahoma', 'Geneva', sans-serif;
+ font-style: italic;
+ color: #c0c0c0;
+}
+a.rvts15, span.rvts15 /* Font Style */
+{
+ font-family: 'Tahoma', 'Geneva', sans-serif;
+ font-style: italic;
+ color: #6666ff;
+ text-decoration: underline;
+}
+span.rvts16
+{
+ font-size: 15pt;
+ font-family: 'calibri';
+ color: #000000;
+}
+span.rvts17
+{
+ font-size: 12pt;
+ font-family: 'Times New Roman', 'Times', serif;
+ color: #000000;
+}
+span.rvts18
+{
+ font-size: 14pt;
+ font-family: '@Arial Unicode MS';
+ font-weight: bold;
+ color: #365f92;
+}
+span.rvts19
+{
+ font-size: 12pt;
+ font-family: '@Arial Unicode MS';
+ font-style: italic;
+ color: #262626;
+}
+span.rvts20
+{
+ font-size: 12pt;
+ font-family: '@Arial Unicode MS';
+ font-weight: bold;
+ color: #262626;
+}
+span.rvts21
+{
+ font-size: 14pt;
+ font-family: '@Arial Unicode MS';
+ font-style: italic;
+ color: #262626;
+}
+a.rvts22, span.rvts22
+{
+ font-size: 14pt;
+ font-family: 'mangal';
+ color: #000080;
+ text-decoration: underline;
+}
+span.rvts23
+{
+ font-size: 12pt;
+ color: #ffffff;
+}
+span.rvts24
+{
+ font-size: 12pt;
+ font-family: '@Arial Unicode MS';
+ color: #ff0000;
+}
+span.rvts25
+{
+ font-size: 18pt;
+ font-family: '@Arial Unicode MS';
+ color: #a23333;
+}
+span.rvts26
+{
+ font-size: 14pt;
+ font-family: 'Times New Roman', 'Times', serif;
+ font-weight: bold;
+ color: #336699;
+}
+span.rvts27
+{
+ font-size: 14pt;
+ font-family: 'Times New Roman', 'Times', serif;
+ font-weight: bold;
+ color: #ff0000;
+}
+span.rvts28
+{
+ font-size: 14pt;
+ font-family: 'Times New Roman', 'Times', serif;
+ font-style: italic;
+}
+span.rvts29
+{
+ font-size: 14pt;
+ font-family: 'Times New Roman', 'Times', serif;
+ color: #000000;
+}
+span.rvts30
+{
+ font-size: 14pt;
+ font-family: 'Times New Roman', 'Times', serif;
+ font-weight: bold;
+ color: #000000;
+}
+span.rvts31
+{
+ font-size: 16pt;
+ font-family: 'calibri';
+ color: #ff0000;
+}
+span.rvts32
+{
+ font-size: 14pt;
+ font-family: '@Arial Unicode MS';
+ font-weight: bold;
+ color: #336699;
+}
+span.rvts33
+{
+ font-size: 12pt;
+ font-family: '@Arial Unicode MS';
+ font-weight: bold;
+ color: #ff3333;
+}
+span.rvts34
+{
+ font-size: 9pt;
+ font-family: '@Arial Unicode MS';
+}
+span.rvts35
+{
+ font-size: 12pt;
+ font-family: '@Arial Unicode MS';
+ color: #000000;
+}
+span.rvts36
+{
+ font-size: 12pt;
+ font-family: '@Arial Unicode MS';
+}
+span.rvts37
+{
+ font-size: 14pt;
+ font-family: '@Arial Unicode MS';
+ font-weight: bold;
+ color: ;
+}
+span.rvts38
+{
+ font-size: 14pt;
+ font-family: '@Arial Unicode MS';
+ font-weight: bold;
+ color: #8b0000;
+}
+span.rvts39
+{
+ font-size: 14pt;
+ font-family: '@Arial Unicode MS';
+ font-weight: bold;
+ color: ;
+}
+span.rvts40
+{
+ font-size: 14pt;
+ font-family: '@Arial Unicode MS';
+ color: #8b0000;
+}
+span.rvts41
+{
+ font-size: 14pt;
+ font-family: '@Arial Unicode MS';
+ color: ;
+}
+span.rvts42
+{
+ font-size: 14pt;
+ font-family: '@Arial Unicode MS';
+ font-style: italic;
+ font-weight: bold;
+ color: ;
+}
+a.rvts43, span.rvts43
+{
+ font-size: 14pt;
+ font-family: '@Arial Unicode MS';
+ color: #0000ff;
+ text-decoration: underline;
+}
+a.rvts43:hover { color: #0000ff; }
+span.rvts44
+{
+ font-size: 14pt;
+ font-family: '@Arial Unicode MS';
+ font-weight: bold;
+ color: #c00000;
+}
+span.rvts45
+{
+ font-size: 14pt;
+ font-family: '@Arial Unicode MS';
+ color: #c00000;
+}
+span.rvts46
+{
+ font-size: 14pt;
+ font-family: '@Arial Unicode MS';
+ font-style: italic;
+}
+span.rvts47
+{
+ font-size: 14pt;
+ font-family: '@Arial Unicode MS';
+ color: #000000;
+}
+span.rvts48
+{
+ font-size: 14pt;
+ font-family: '@Arial Unicode MS';
+ font-weight: bold;
+ color: #000000;
+}
+span.rvts49
+{
+ font-size: 14pt;
+ font-family: '@Arial Unicode MS';
+ font-weight: bold;
+ color: #ff0000;
+}
+span.rvts50
+{
+ font-size: 14pt;
+ font-family: '@Arial Unicode MS';
+ font-weight: bold;
+}
+span.rvts51
+{
+ font-size: 14pt;
+ font-family: '@Arial Unicode MS';
+ font-style: italic;
+ font-weight: bold;
+ color: #0000ff;
+}
+span.rvts52
+{
+ font-size: 14pt;
+ font-family: '@Arial Unicode MS';
+ font-style: italic;
+ color: #8b0000;
+}
+span.rvts53
+{
+ font-size: 14pt;
+ font-family: '@Arial Unicode MS';
+ font-weight: bold;
+ color: #8b0000;
+}
+span.rvts54
+{
+ font-size: 14pt;
+ font-family: 'calibri';
+ font-style: italic;
+}
+span.rvts55
+{
+ font-size: 14pt;
+ font-family: '@Arial Unicode MS';
+ font-style: italic;
+ font-weight: bold;
+ color: #c00000;
+}
+span.rvts56
+{
+ font-size: 11pt;
+ font-family: '@Arial Unicode MS';
+ font-weight: bold;
+}
+span.rvts57
+{
+ font-size: 12pt;
+ font-family: '@Arial Unicode MS';
+ font-weight: bold;
+}
+span.rvts58
+{
+ font-size: 14pt;
+ font-family: '@Arial Unicode MS';
+}
+span.rvts59
+{
+ font-size: 16pt;
+ font-family: '@Arial Unicode MS';
+ font-style: italic;
+ font-weight: bold;
+ color: #c00000;
+}
+span.rvts60
+{
+ font-size: 14pt;
+ font-family: 'calibri';
+ font-style: italic;
+ color: #800080;
+}
+span.rvts61
+{
+ font-size: 14pt;
+ font-family: 'calibri';
+ font-style: italic;
+ font-weight: bold;
+ color: #800080;
+}
+span.rvts62
+{
+}
+span.rvts63
+{
+ font-size: 14pt;
+ font-family: '@Arial Unicode MS';
+}
+span.rvts64
+{
+ font-size: 18pt;
+ font-family: '@Arial Unicode MS';
+ color: #8b0000;
+}
+span.rvts65
+{
+ font-size: 18pt;
+ font-family: '@Arial Unicode MS';
+ font-weight: bold;
+ color: #8b0000;
+}
+span.rvts66
+{
+ font-size: 14pt;
+ font-family: '@Arial Unicode MS';
+ font-style: italic;
+ font-weight: bold;
+}
+span.rvts67
+{
+ font-size: 12pt;
+ font-family: '@Arial Unicode MS';
+ font-style: italic;
+ font-weight: bold;
+ color: ;
+}
+span.rvts68
+{
+ font-size: 12pt;
+ font-family: 'Times New Roman', 'Times', serif;
+ font-style: italic;
+ font-weight: bold;
+ color: #0000ff;
+}
+span.rvts69
+{
+ font-size: 14pt;
+ font-family: 'Times New Roman', 'Times', serif;
+}
+span.rvts70
+{
+ font-size: 14pt;
+ font-family: 'Times New Roman', 'Times', serif;
+ font-style: italic;
+ font-weight: bold;
+}
+span.rvts71
+{
+ font-size: 14pt;
+ font-family: 'Times New Roman', 'Times', serif;
+ font-weight: bold;
+ color: #0000ff;
+}
+span.rvts72
+{
+ font-size: 14pt;
+ font-family: 'Times New Roman', 'Times', serif;
+ font-style: italic;
+ font-weight: bold;
+ color: #000000;
+}
+span.rvts73
+{
+ font-size: 14pt;
+ font-family: '@Arial Unicode MS';
+ font-style: italic;
+ font-weight: bold;
+ color: #8b0000;
+}
+span.rvts74
+{
+ font-size: 16pt;
+ font-family: '@Arial Unicode MS';
+ font-weight: bold;
+ color: #8b0000;
+}
+span.rvts75
+{
+ font-size: 14pt;
+ font-family: 'calibri';
+ color: #c00000;
+}
+span.rvts76
+{
+ font-size: 14pt;
+ font-family: 'calibri';
+ font-weight: bold;
+ color: #c00000;
+}
+span.rvts77
+{
+ font-size: 14pt;
+ font-family: 'calibri';
+ font-weight: bold;
+}
+span.rvts78
+{
+ font-size: 12pt;
+ font-family: 'calibri';
+ font-weight: bold;
+}
+span.rvts79
+{
+ font-size: 11pt;
+ font-family: 'calibri';
+}
+span.rvts80
+{
+ font-size: 11pt;
+ font-family: 'calibri';
+ font-weight: bold;
+}
+span.rvts81
+{
+ font-size: 11pt;
+ font-family: 'calibri';
+ font-style: italic;
+}
+a.rvts82, span.rvts82
+{
+ font-size: 11pt;
+ font-family: 'calibri';
+ color: #0000ff;
+ text-decoration: underline;
+}
+span.rvts83
+{
+ font-size: 11pt;
+ font-family: 'calibri';
+ font-weight: bold;
+ color: #ff0000;
+}
+span.rvts84
+{
+ font-size: 14pt;
+ font-family: 'Times New Roman', 'Times', serif;
+ font-weight: bold;
+ color: #632423;
+}
+span.rvts85
+{
+ font-size: 14pt;
+ font-family: 'calibri';
+ color: #000000;
+}
+span.rvts86
+{
+ font-size: 16pt;
+ font-family: 'calibri';
+ color: #000000;
+}
+span.rvts87
+{
+ font-size: 16pt;
+ font-family: 'calibri';
+ font-weight: bold;
+ color: #000000;
+}
+a.rvts88, span.rvts88
+{
+ font-size: 14pt;
+ font-family: '@Arial Unicode MS';
+ color: #000080;
+ text-decoration: underline;
+}
+span.rvts89
+{
+ font-size: 14pt;
+ font-family: '@Arial Unicode MS';
+ font-style: italic;
+ color: #000000;
+}
+span.rvts90
+{
+ font-size: 14pt;
+ font-family: 'calibri';
+ font-weight: bold;
+ color: #000000;
+}
+span.rvts91
+{
+ font-size: 11pt;
+ color: #000000;
+}
+span.rvts92
+{
+ font-size: 11pt;
+ font-family: 'Times New Roman', 'Times', serif;
+}
+span.rvts93
+{
+ font-size: 11pt;
+ font-family: '@Arial Unicode MS';
+ font-style: italic;
+ color: #000000;
+}
+span.rvts94
+{
+ font-size: 14pt;
+ font-family: '@Arial Unicode MS';
+ font-weight: bold;
+ color: #c00000;
+}
+span.rvts95
+{
+ font-size: 16pt;
+ font-family: 'calibri';
+ color: #0000bf;
+}
+span.rvts96
+{
+ font-size: 16pt;
+ font-family: 'calibri';
+ font-weight: bold;
+ color: #0000bf;
+}
+span.rvts97
+{
+ font-size: 14pt;
+ font-family: '@Arial Unicode MS';
+ font-weight: bold;
+ color: #0000bf;
+}
+span.rvts98
+{
+ font-size: 14pt;
+ font-family: '@Arial Unicode MS';
+ color: #ff0000;
+}
+span.rvts99
+{
+ font-size: 16pt;
+ font-family: 'calibri';
+ font-style: italic;
+ font-weight: bold;
+ color: #8b0000;
+ text-decoration: underline;
+}
+span.rvts100
+{
+ font-size: 12pt;
+ color: ;
+}
+span.rvts101
+{
+ font-size: 14pt;
+ color: ;
+}
+a.rvts102, span.rvts102
+{
+ font-size: 14pt;
+ color: #0000ff;
+ text-decoration: underline;
+}
+a.rvts102:hover { color: #0000ff; }
+span.rvts103
+{
+ font-size: 12pt;
+ font-family: 'calibri';
+}
+span.rvts104
+{
+ font-size: 14pt;
+ font-family: 'Times New Roman', 'Times', serif;
+ font-weight: bold;
+}
+span.rvts105
+{
+ font-size: 14pt;
+ font-family: 'calibri';
+ font-style: italic;
+ color: #00007f;
+}
+span.rvts106
+{
+ font-size: 14pt;
+ font-family: 'calibri';
+ font-style: italic;
+ font-weight: bold;
+ color: #00007f;
+}
+span.rvts107
+{
+ font-size: 14pt;
+ font-family: 'calibri';
+ font-style: italic;
+ font-weight: bold;
+}
+span.rvts108
+{
+ font-size: 12pt;
+ font-family: 'Times New Roman', 'Times', serif;
+}
+span.rvts109
+{
+ font-size: 14pt;
+ font-family: 'calibri';
+ font-style: italic;
+ font-weight: bold;
+ color: #0000bf;
+}
+span.rvts110
+{
+ font-size: 14pt;
+ font-family: 'calibri';
+ font-style: italic;
+ color: #0000bf;
+}
+span.rvts111
+{
+ font-size: 14pt;
+ font-family: 'Times New Roman', 'Times', serif;
+ font-style: italic;
+ color: #0000bf;
+}
+span.rvts112
+{
+ font-size: 12pt;
+ font-family: 'Times New Roman', 'Times', serif;
+ font-style: italic;
+ color: #0000bf;
+}
+span.rvts113
+{
+ font-size: 12pt;
+ font-family: 'calibri';
+ font-style: italic;
+ font-weight: bold;
+ color: #0000bf;
+}
+span.rvts114
+{
+ font-style: italic;
+}
+span.rvts115
+{
+ font-size: 14pt;
+ color: #000000;
+}
+span.rvts116
+{
+ font-family: 'Times New Roman', 'Times', serif;
+}
+span.rvts117
+{
+ font-size: 16pt;
+ font-family: 'Times New Roman', 'Times', serif;
+ font-style: italic;
+ font-weight: bold;
+ color: #c00000;
+}
+span.rvts118
+{
+ font-size: 14pt;
+ font-family: '@Arial Unicode MS';
+ font-style: italic;
+ font-weight: bold;
+ color: #000000;
+}
+a.rvts119, span.rvts119
+{
+ font-size: 14pt;
+ font-family: '@Arial Unicode MS';
+ color: #0000ff;
+ text-decoration: underline;
+}
+a.rvts120, span.rvts120
+{
+ font-size: 14pt;
+ font-family: '@Arial Unicode MS';
+ color: #000081;
+ text-decoration: underline;
+}
+span.rvts121
+{
+ font-size: 14pt;
+ font-family: '@Arial Unicode MS';
+ color: #c00000;
+}
+span.rvts122
+{
+ font-size: 14pt;
+ font-family: '@Arial Unicode MS';
+ color: ;
+}
+a.rvts123, span.rvts123
+{
+ font-size: 14pt;
+ font-family: '@Arial Unicode MS';
+ color: #0000ff;
+ text-decoration: underline;
+}
+a.rvts123:hover { color: #0000ff; }
+a.rvts124, span.rvts124
+{
+ font-size: 14pt;
+ font-family: '@Arial Unicode MS';
+ font-weight: bold;
+ color: #0000ff;
+ text-decoration: underline;
+}
+span.rvts125
+{
+ font-size: 14pt;
+ font-family: '@Arial Unicode MS';
+ color: #002060;
+}
+span.rvts126
+{
+ font-size: 14pt;
+}
+span.rvts127
+{
+ font-size: 11pt;
+}
+span.rvts128
+{
+ font-size: 14pt;
+ font-family: 'Times New Roman', 'Times', serif;
+ font-style: italic;
+ font-weight: bold;
+ color: #c00000;
+}
+span.rvts129
+{
+ font-size: 14pt;
+ font-family: 'Times New Roman', 'Times', serif;
+ font-style: italic;
+ font-weight: bold;
+ color: #800080;
+}
+span.rvts130
+{
+ font-size: 16pt;
+ font-family: '@Arial Unicode MS';
+ font-weight: bold;
+ color: #600060;
+ text-decoration: underline;
+}
+span.rvts131
+{
+ font-size: 14pt;
+ font-family: '@Arial Unicode MS';
+ font-weight: bold;
+ color: #600060;
+ text-decoration: underline;
+}
+span.rvts132
+{
+ font-size: 14pt;
+ font-family: 'calibri';
+ color: #215868;
+}
+span.rvts133
+{
+ font-size: 14pt;
+ font-family: 'calibri';
+}
+span.rvts134
+{
+ font-size: 14pt;
+ font-family: 'calibri';
+ font-style: italic;
+ color: #215868;
+}
+span.rvts135
+{
+ font-size: 14pt;
+ font-family: 'Times New Roman', 'Times', serif;
+ font-style: italic;
+ color: #215868;
+}
+span.rvts136
+{
+ font-size: 14pt;
+ font-family: '@Arial Unicode MS';
+ font-weight: bold;
+ color: #0f243e;
+ text-decoration: underline;
+}
+span.rvts137
+{
+ font-size: 14pt;
+ font-family: '@Arial Unicode MS';
+ font-weight: bold;
+ color: #0f243e;
+}
+span.rvts138
+{
+ font-size: 14pt;
+ font-family: '@Arial Unicode MS';
+ font-weight: bold;
+ color: #002060;
+ text-decoration: underline;
+}
+span.rvts139
+{
+ font-size: 14pt;
+ font-family: '@Arial Unicode MS';
+ color: #8b0000;
+}
+span.rvts140
+{
+ font-size: 14pt;
+ font-family: 'calibri';
+ color: #ff0000;
+}
+span.rvts141
+{
+ font-size: 14pt;
+ font-family: 'calibri';
+ color: #ff0000;
+ text-decoration: underline;
+}
+span.rvts142
+{
+ font-size: 14pt;
+ font-family: 'calibri';
+ font-weight: bold;
+ color: #ff0000;
+ text-decoration: underline;
+}
+span.rvts143
+{
+ font-size: 14pt;
+ font-family: 'calibri';
+ font-weight: bold;
+ color: #ff0000;
+}
+span.rvts144
+{
+ font-size: 18pt;
+ font-family: 'calibri';
+ font-weight: bold;
+ color: #ff0000;
+}
+span.rvts145
+{
+ font-size: 14pt;
+ font-family: '@Arial Unicode MS';
+ font-weight: bold;
+ color: #00007f;
+ text-decoration: underline;
+}
+span.rvts146
+{
+ font-size: 14pt;
+ font-family: '@Arial Unicode MS';
+ font-weight: bold;
+ color: #00007f;
+}
+span.rvts147
+{
+ font-size: 12pt;
+ font-family: 'calibri';
+ color: #808080;
+}
+span.rvts148
+{
+ font-size: 12pt;
+ font-family: 'calibri';
+ font-weight: bold;
+ color: #808080;
+}
+span.rvts149
+{
+ font-size: 12pt;
+ font-family: 'calibri';
+ font-style: italic;
+ color: #0000bf;
+}
+a.rvts150, span.rvts150
+{
+ font-size: 14pt;
+ font-family: 'calibri';
+ color: #0000ff;
+ text-decoration: underline;
+}
+span.rvts151
+{
+ font-family: 'open sans';
+ color: #333333;
+}
+span.rvts152
+{
+ font-size: 14pt;
+ font-family: 'open sans';
+ font-weight: bold;
+ color: #333333;
+}
+span.rvts153
+{
+ font-size: 12pt;
+ font-family: 'open sans';
+ font-weight: bold;
+ color: #8b0000;
+}
+span.rvts154
+{
+ font-size: 14pt;
+ font-family: 'open sans';
+ color: #333333;
+}
+a.rvts155, span.rvts155
+{
+ font-size: 14pt;
+ font-family: 'open sans';
+ color: #017fad;
+ text-decoration: none;
+}
+a.rvts156, span.rvts156
+{
+ font-size: 14pt;
+ font-family: '@Arial Unicode MS';
+ font-weight: bold;
+ color: #0000ff;
+ text-decoration: underline;
+}
+a.rvts156:hover { color: #0000ff; }
+/* ========== Para Styles ========== */
+p,ul,ol /* Paragraph Style */
+{
+ text-align: left;
+ text-indent: 0px;
+ padding: 0px 0px 0px 0px;
+ margin: 0px 0px 0px 0px;
+}
+.rvps1 /* Centered */
+{
+ text-align: center;
+}
+.rvps2 /* Paragraph Style */
+{
+}
+.rvps3
+{
+ text-align: center;
+ background: #008000;
+}
+.rvps4
+{
+ text-align: center;
+}
+.rvps5
+{
+ text-align: left;
+ text-indent: 55px;
+ page-break-after: avoid;
+ background: #ffffff;
+ padding: 0px 0px 0px 0px;
+ margin: 0px 0px 8px 0px;
+}
+.rvps6
+{
+ text-indent: 55px;
+ background: #ffffff;
+ margin: 0px 0px 8px 0px;
+}
+.rvps7 /* Paragraph Style */
+{
+ text-align: center;
+ border-color: #c0c0c0;
+ border-style: solid;
+ border-width: 1px;
+ border-right: none;
+ border-left: none;
+ padding: 2px 0px 2px 0px;
+ margin: 7px 0px 7px 0px;
+}
+.rvps8
+{
+ text-align: left;
+ text-indent: 0px;
+ page-break-after: avoid;
+ background: #ffffff;
+ padding: 0px 0px 0px 0px;
+ margin: 0px 0px 0px 0px;
+}
+.rvps9
+{
+ line-height: 1.20;
+ margin: 0px 0px 9px 0px;
+}
+.rvps10
+{
+ text-indent: -19px;
+ margin: 0px 0px 0px 19px;
+}
+.rvps11
+{
+ margin: 0px 1px 0px 0px;
+}
+.rvps12
+{
+ text-indent: -24px;
+ margin: 0px 0px 0px 48px;
+}
+.rvps13
+{
+ margin: 0px 0px 0px 48px;
+}
+.rvps14
+{
+ text-indent: -24px;
+ margin: 0px 0px 4px 48px;
+}
+.rvps15
+{
+ text-indent: 58px;
+}
+.rvps16
+{
+ text-align: center;
+ background: #00b050;
+}
+.rvps17
+{
+}
+.rvps18
+{
+ line-height: 1.15;
+ margin: 0px 0px 13px 0px;
+}
+.rvps19
+{
+ text-align: center;
+}
+.rvps20
+{
+}
+.rvps21
+{
+ text-align: center;
+ line-height: 1.15;
+ margin: 0px 0px 13px 0px;
+}
+.rvps22
+{
+}
+.rvps23
+{
+ text-indent: -30px;
+ margin: 0px 0px 0px 67px;
+}
+.rvps24
+{
+ text-align: justify;
+ text-indent: -30px;
+ margin: 0px 0px 0px 67px;
+}
+.rvps25
+{
+ text-align: center;
+ text-indent: -30px;
+ margin: 0px 0px 0px 67px;
+}
+.rvps26
+{
+ text-align: justify;
+}
+.rvps27
+{
+}
+.rvps28
+{
+ text-indent: 48px;
+}
+.rvps29
+{
+ text-indent: 47px;
+ line-height: 1.15;
+ margin: 0px 0px 13px 0px;
+}
+.rvps30
+{
+ text-align: center;
+ line-height: 1.15;
+ margin: 0px 0px 13px 19px;
+}
+.rvps31
+{
+ line-height: 1.15;
+ margin: 0px 0px 13px 19px;
+}
+.rvps32
+{
+ text-indent: -24px;
+ line-height: 1.15;
+ margin: 0px 0px 13px 72px;
+}
+.rvps33
+{
+}
+.rvps34
+{
+ margin: 0px 0px 0px 47px;
+}
+.rvps35
+{
+ text-indent: -24px;
+ line-height: 1.15;
+ margin: 0px 0px 13px 48px;
+}
+.rvps36
+{
+ text-align: center;
+}
+.rvps37
+{
+ text-align: left;
+ text-indent: 0px;
+ background: #ffffff;
+ padding: 0px 0px 0px 0px;
+ margin: 0px 0px 7px 0px;
+}
+.rvps38
+{
+ background: #ffffff;
+ margin: 0px 0px 7px 0px;
+}

@@ -3,6 +3,11 @@
         {
             "name": "Win32",
             "includePath": [
+                "D:\\Program Files (x86)\\Arduino\\tools\\**",
+                "D:\\Documents\\Arduino\\libraries\\**",
+                "D:\\Program Files (x86)\\Arduino\\libraries\\**",
+                "D:\\Program Files (x86)\\Arduino\\hardware\\tools\\**",
+                "D:\\Program Files (x86)\\Arduino\\hardware\\arduino\\avr\\**",
                 "${workspaceFolder}/**"
             ],
             "defines": [
@@ -14,7 +19,10 @@
             "compilerPath": "D:/Program Files (x86)/Microsoft Visual Studio/2019/Community/VC/Tools/MSVC/14.28.29910/bin/Hostx64/x64/cl.exe",
             "cStandard": "c17",
             "cppStandard": "c++17",
-            "intelliSenseMode": "windows-msvc-x64"
+            "intelliSenseMode": "windows-msvc-x64",
+            "forcedInclude": [
+                "D:\\Program Files (x86)\\Arduino\\hardware\\arduino\\avr\\cores\\arduino\\Arduino.h"
+            ]
         }
     ],
     "version": 4

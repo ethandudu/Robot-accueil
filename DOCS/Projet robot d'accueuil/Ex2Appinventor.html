@@ -1,0 +1,160 @@
+﻿<html>
+	
+<head>
+	<title>Ex2 App inventor</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta name="generator" content="HelpNDoc Personal Edition 3.7.0.456">
+	<link type="text/css" rel="stylesheet" media="all" href="css/reset.css" />
+	<link type="text/css" rel="stylesheet" media="all" href="css/base.css" />
+	<link type="text/css" rel="stylesheet" media="all" href="css/hnd.css" />
+	<!--[if lte IE 8]>
+		<link type="text/css" rel="stylesheet" media="all" href="css/ielte8.css" />
+	<![endif]-->
+	<style type="text/css">
+		#topic_header
+		{
+			background-color: #EFEFEF;
+		}
+	</style>
+	<script type="text/javascript" src="js/jquery.min.js"></script>
+	<script type="text/javascript" src="js/hnd.js"></script>
+	<script type="text/javascript">
+		if (top.frames.length == 0)
+		{
+			var sTopicUrl = top.location.href.substring(top.location.href.lastIndexOf("/") + 1, top.location.href.length);
+			top.location.href = "Projet robot d'accueuil.html?" + sTopicUrl;
+		}
+		else if (top && top.FrameTOC && top.FrameTOC.SelectTocItem)
+		{
+			top.FrameTOC.SelectTocItem("Ex2Appinventor");
+		}
+	</script>
+</head>
+
+<body>
+
+	<div id="topic_header">
+			<div id="topic_header_content">
+				<h1>Ex2 App inventor</h1>
+				
+				<div id="topic_breadcrumb">
+					<a href="Ressources.html">Ressources</a> &rsaquo;&rsaquo; <a href="Ressourcesappinventor.html">Ressources app inventor</a> &rsaquo;&rsaquo; </div>
+				</div>
+			<div id="topic_header_nav">
+				<a href="Ressourcesappinventor.html"><img src="img/arrow_up.png" alt="Parent"/></a>
+				
+				<a href="Ex1Appinventor.html"><img src="img/arrow_left.png" alt="Previous"/></a>
+				
+				<a href="Ex3appinventor.html"><img src="img/arrow_right.png" alt="Next"/></a>
+				
+				</div>
+			<div class="clear"></div>
+		</div>
+	<div id="topic_content">
+		
+<p></p>
+<div class="rvps1"><table width="100%" border="1" cellpadding="0" cellspacing="0" style="border-width: 0px;">
+<tr valign="top">
+<td style="border-width : 1px; border-color: #000000; border-style: solid; border-top: none; border-right: none; border-bottom: none; border-left: none;"><p class="rvps1"><span class="rvts6"><br/></span></p>
+<p class="rvps1"><span class="rvts6"><br/></span></p>
+<p class="rvps21"><img alt="" style="padding : 1px;" src="lib/NouvelElement88.png"/><span class="rvts114"> &nbsp; &nbsp; &nbsp; </span><img width="162" height="114" alt="" style="padding : 1px;" src="lib/NouvelElement66.png"/></p>
+</td>
+</tr>
+<tr valign="top">
+<td style="border-width : 1px; border-color: #666699; border-style: solid; border-top: none; border-right: none; border-bottom: none; border-left: none;"><p class="rvps3"><span class="rvts7">Exemple 2 APP Inventor: CONNECTER UN SMATPHONE A LA CARTE ARDUINO</span></p>
+</td>
+</tr>
+</table>
+</div>
+<p class="rvps30"><span class="rvts117"><br/></span></p>
+<p class="rvps30"><span class="rvts117">Ce document est un petit exemple de prise en main &nbsp;destiné à vous aider dans votre apprentissage de App Inventor pour connecter le téléphone à la carte Arduino, ce qui vous permettra par sa suite de se servir du téléphone comme d'une IHM (Interface Homme Machine)</span></p>
+<p class="rvps31"><span class="rvts129">Avant de commencer l'exercice, lire les chapitres "ressources app inventor" et regarder les tutoriels donnés ainsi que le document PDF suivant:&nbsp;</span><a class="rvts123" href="files/Documents/app inventor/debuter_app_inventor.pdf"> document pdf d'aide plus complet &nbsp;</a><a href="files/Documents/app inventor/debuter_app_inventor.pdf"><img width="263" height="77" alt="" style="padding : 1px;" src="lib/NouvelElement95.png"/></a><span class="rvts128"> </span></p>
+<p class="rvps18"><a class="rvts123" href="files/Documents/app inventor/Arduino Application Android avec le module Bluetooth.mp4">Vous pouvez visualiser la video en cliquant sur ce lien:</a><a href="files/Documents/app inventor/Arduino Application Android avec le module Bluetooth.mp4"><img width="77" height="79" alt="" style="padding : 1px;" src="lib/NouvelElement96.png"/></a></p>
+<p class="rvps21"><span class="rvts130"><br/></span></p>
+<p class="rvps21"><span class="rvts130">CONNECTER LE TELEPHONE A LA CARTE ARDUINO</span></p>
+<p class="rvps18"><span class="rvts131">Configuration</span></p>
+<p class="rvps21"><img alt="" style="padding : 1px;" src="lib/NouvelElement96.png"/></p>
+<p class="rvps18"><span class="rvts131">Programme de l'émetteur (carte Arduino)</span></p>
+<div class="rvps27"><table border="1" cellpadding="4" cellspacing="-1" style="border-width: 0px; border-collapse: collapse;">
+<tr valign="top">
+<td valign="top" style="border-width : 1px; border-color: #000000; border-style: solid; width: 326px;"><p class="rvps21"><span class="rvts77">Programme&nbsp;: 1_arduino_bluetooth</span></p>
+</td>
+<td valign="top" style="border-width : 1px; border-color: #000000; border-style: solid; width: 326px;"><p class="rvps21"><span class="rvts77">Commentaires</span></p>
+</td>
+</tr>
+<tr valign="top">
+<td valign="top" style="border-width : 1px; border-color: #000000; border-style: solid; width: 326px;"><p class="rvps2"><span class="rvts132">//Initialisation des E/S et communication</span></p>
+<p class="rvps34"><span class="rvts133">void setup()</span></p>
+<p class="rvps34"><span class="rvts133"> {</span></p>
+<p class="rvps34"><span class="rvts133">Serial.begin(9600);</span></p>
+<p class="rvps34"><span class="rvts133"> </span><span class="rvts69">}</span></p>
+<p class="rvps2"><span class="rvts132">//Programme principal </span></p>
+<p class="rvps34"><span class="rvts133">void loop() </span></p>
+<p class="rvps34"><span class="rvts133">{</span></p>
+<p class="rvps34"><span class="rvts133"> &nbsp;Serial.println("BONJOUR de");</span></p>
+<p class="rvps34"><span class="rvts133">delay(1500); &nbsp; &nbsp; &nbsp; &nbsp; </span></p>
+<p class="rvps34"><span class="rvts133">Serial.println("prenom"); // </span><span class="rvts132">Ecrire votre prénom dans la parenthèse</span></p>
+<p class="rvps34"><span class="rvts133">delay(1500);</span></p>
+<p class="rvps34"><span class="rvts133"> &nbsp; &nbsp;}</span></p>
+<p class="rvps2"><span class="rvts132">//Fin</span></p>
+<p class="rvps18"><span class="rvts69"><br/></span></p>
+</td>
+<td valign="top" style="border-width : 1px; border-color: #000000; border-style: solid; width: 326px;"><p class="rvps18"><span class="rvts92"><br/></span></p>
+<p class="rvps2"><span class="rvts134">Configuration débit &nbsp;de transmission Bluetooth</span></p>
+<p class="rvps18"><span class="rvts135"><br/></span></p>
+<p class="rvps18"><span class="rvts134">Envoi cadencé à 1,5s &nbsp;des messages</span></p>
+<ul style="text-indent: 0px; margin-left: 48px; list-style-position: outside;">
+<li class="rvps35" style="margin-left: 0; text-indent: 0px"><span class="rvts134">BONJOUR de</span></li>
+<li class="rvps35" style="margin-left: 0; text-indent: 0px"><span class="rvts134">prénom</span></li>
+</ul>
+</td>
+</tr>
+</table>
+</div>
+<p class="rvps36"><img width="630" height="119" alt="" style="padding : 1px;" src="lib/NouvelElement111.png"/></p>
+<p class="rvps18"><span class="rvts130"><br/></span></p>
+<p class="rvps18"><span class="rvts136">Raccordement du module bluetooth sur la carde arduino &nbsp; </span></p>
+<p class="rvps21"><img width="663" height="356" alt="" style="padding : 1px;" src="lib/NouvelElement97.png"/><span class="rvts137"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</span><img width="746" height="527" alt="" style="padding : 1px;" src="lib/NouvelElement99.png"/><span class="rvts137"> &nbsp; </span></p>
+<p class="rvps18"><span class="rvts137"><br/></span></p>
+<p class="rvps21"><span class="rvts140"> </span><span class="rvts141">Identification bluetooth&nbsp;:</span><span class="rvts140"> itead&nbsp;; </span><span class="rvts142">code appariement</span><span class="rvts27">&nbsp;</span><span class="rvts143">: </span><span class="rvts144">1234</span></p>
+<p class="rvps18"><span class="rvts138">Application App invento du smartphone</span></p>
+<p class="rvps18"><span class="rvts139">Importer depuis app inventor le fichier :" </span><span class="rvts53">Ex2_config_bluetooth.aia</span><span class="rvts139">" fourni</span></p>
+<p class="rvps21"><img alt="" style="padding : 1px;" src="lib/NouvelElement112.png"/></p>
+<p class="rvps18"><span class="rvts138"><br/></span></p>
+<div class="rvps27"><table border="1" cellpadding="4" cellspacing="-1" style="border-width: 0px; border-collapse: collapse;">
+<tr valign="top">
+<td valign="top" style="border-width : 1px; border-color: #000000; border-style: solid; width: 326px;"><p class="rvps21"><span class="rvts77">Écran du terminal</span></p>
+</td>
+<td valign="top" style="border-width : 1px; border-color: #000000; border-style: solid; width: 326px;"><p class="rvps21"><span class="rvts77">Composants installés</span></p>
+</td>
+</tr>
+<tr valign="top">
+<td valign="top" style="border-width : 1px; border-color: #000000; border-style: solid; width: 326px;"><p class="rvps21"><img alt="" style="padding : 1px;" src="lib/NouvelElement100.png"/></p>
+</td>
+<td valign="top" style="border-width : 1px; border-color: #000000; border-style: solid; width: 326px;"><p class="rvps21"><img alt="" style="padding : 1px;" src="lib/NouvelElement101.png"/></p>
+</td>
+</tr>
+</table>
+</div>
+<p class="rvps27"><span class="rvts138"><br/></span></p>
+<p class="rvps27"><img alt="" style="padding : 1px;" src="lib/NouvelElement106.png"/></p>
+<p class="rvps27"><span class="rvts138"><br/></span></p>
+<p class="rvps23"><span class="rvts94">Essais:</span></p>
+<p class="rvps23"><span class="rvts89">Tester le programme;</span></p>
+<p class="rvps23"><span class="rvts89">faire quelques modifications: changer l'image, changer l'aspect des boutons</span></p>
+<p class="rvps23"><span class="rvts89"><br/></span></p>
+<p class="rvps27"><span class="rvts138"><br/></span></p>
+<p class="rvps27"><span class="rvts130"><br/></span></p>
+<p></p>
+<p class="rvps7"><span class="rvts14">Créé avec HelpNDoc Personal Edition: </span><a class="rvts15" href="http://www.helpndoc.com/fr/creer-des-livres-numeriques-epub">Écrire des livres électroniques ePub pour l'iPad</a></p>
+</div>
+	
+	<div id="topic_footer">
+
+			<div id="topic_footer_content">
+				Copyright &copy; &lt;Dates&gt; by &lt;Authors&gt;. All Rights Reserved.</div>
+		</div>
+	</body>
+	
+</html>
+
