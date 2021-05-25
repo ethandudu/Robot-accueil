@@ -22,7 +22,7 @@ int AEServoFYeux = 0; //?
 int AEServoOBoucheB = 0; //?
 int AEServoOBoucheH = 0; //?
 
-// Disable        Pas d'angle pour la rotation de la tête car ne bouge pas
+// Disable         Pas d'angle pour la rotation de la tête car ne bouge pas
 int DEServoITete = 60;
 int DEServoIYeux = 0; //?
 int DEServoRYeux = 0; //?
