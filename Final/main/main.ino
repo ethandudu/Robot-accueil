@@ -1,7 +1,7 @@
 /*
 
-Programme réalisé par les STI2D B, plus d'infos sur le github du projet : https://github.com/ethandudu/Robot-Accueil
- Note : Servo : if value is < 200 its treated as an angle, otherwise as pulse width in microseconds
+Programme réalisé par la STI2D B, plus d'infos sur le github du projet : https://github.com/ethandudu/Robot-Accueil
+
 */
 
 
@@ -138,9 +138,13 @@ void setup()
   ServoOBoucheB.attach(PinSOBoucheB);
   ServoOBoucheH.attach(PinSOBoucheH);
   
-  digitalWrite(PinLedPower, HIGH); // Allumage Led Power
+  digitalWrite(PinLedPower, HIGH); // Activation Led Power
 
 
+  // Indication sonore
+  tone(PinBuzzer, NOTE_D4, 500);
+  delay(100);
+  tone(PinBuzzer, NOTE_D4, 500);
   // Démarrage de l'écran
   lcd.init();
   lcd.backlight();
@@ -168,12 +172,12 @@ void setup()
 
   // Initialisation de la position des servos
   ServoRTete.write(AEServoRTete);
-  ServoITete.write(45);
-  ServoIYeux.write(60); //?
-  ServoRYeux.write(60); //?
-  ServoFYeux.write(60); //?
-  ServoOBoucheB.write(60); //?
-  ServoOBoucheH.write(60); //?
+  ServoITete.write(AEServoITete);
+  ServoIYeux.write(AEServoIYeux);
+  ServoRYeux.write(AEServoRYeux);
+  ServoFYeux.write(AEServoFYeux);
+  ServoOBoucheB.write(AEServoOBoucheB);
+  ServoOBoucheH.write(AEServoOBoucheH);
   
   delay(500);
   
@@ -241,9 +245,12 @@ void systemop()
   lcd.print("Systeme");
   lcd.setCursor(5,1);
   lcd.print("demarre");
-  tone(PinBuzzer, NOTE_A2, 200);
-  delay(500);
-  tone(PinBuzzer, NOTE_A2, 200);
+  // Welcoming sonore
+  tone(PinBuzzer, NOTE_G4, 200);
+  delay(10);
+  tone(PinBuzzer, NOTE_A4, 200);
+  delay(10);
+  tone(PinBuzzer, NOTE_B4, 200);
   delay(1000);
   lcd.clear();
 }
@@ -274,6 +281,15 @@ void activation()
   {
   //delay(500);
     digitalWrite(PinLedDebug, HIGH); // Activation LED détection
+    // Positionnement des servos en actif
+    ServoRTete.write(AEServoRTete);
+    ServoITete.write(AEServoITete);
+    ServoIYeux.write(AEServoIYeux);
+    ServoRYeux.write(AEServoRYeux);
+    ServoFYeux.write(AEServoFYeux);
+    ServoOBoucheB.write(AEServoOBoucheB);
+    ServoOBoucheH.write(AEServoOBoucheH);
+    // Affichage sur l'écran
     lcd.setCursor(4,0);
     lcd.print ("BONJOUR,");
     delay(1000);
@@ -286,8 +302,14 @@ void activation()
   }
   else
   {
+    // Positionnement des servos en repos
+    ServoITete.write(DEServoITete);
+    ServoIYeux.write(DEServoIYeux);
+    ServoRYeux.write(DEServoRYeux);
+    ServoFYeux.write(DEServoFYeux);
+    ServoOBoucheB.write(DEServoOBoucheB);
+    ServoOBoucheH.write(DEServoOBoucheH);
     digitalWrite(PinLedDebug, LOW); // Désactivation LED détection
-    
   }
 
 }
