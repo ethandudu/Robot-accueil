@@ -1,15 +1,55 @@
-#include <LiquidCrystal_I2C.h>
-#include <Wire.h>
-#include "pitches.h"
-#include <Servo.h>
+/**
 
-//Définition pins servos
-int P1 = 3;
-Servo servo1;
+Programme réalisé par les STI2D B, plus d'infos sur le github du projet : https://github.com/ethandudu/Robot-Accueil
 
+**/
+
+
+//Définition des librairies à utiliser
+#include <LiquidCrystal_I2C.h> // Écran LCD
+#include <Wire.h> // Shield de l'écran
+#include "pitches.h" // Notes du buzzer
+#include <Servo.h> // Servo moteurs
+
+// Définition pins autres
+int PinBuzzer = 4;
+
+
+// Définition pins Leds
+int PinLedPower = 8;
+int PinLedStatus = 9;
+int PinLedDebug = 5;
+
+
+// Définition pins HC-SR04
+int PinHCTrigger = 7;
+int PinHCEcho = 6;
+
+
+// Définition pins servos             Pin = Pin, S = Servo-moteur, R= Rotation, O = Ouverture, B = Bas, H = Haut, I = Inclinaison, F = Fermeture
+int PinSRTete = 3; // Rotation de la tête
+int PinSITete = ; //Inclinaison tête
+int PinSIYeux = ; // Inclinaison des yeux
+int PinSRYeux = ; // Rotation des yeux
+int PinSFYeux = ; // Fermeture des paupières
+int PinSOBoucheB = ; // Lèvre bas
+int PinSOBoucheH = ; // Lèvre haut
+
+
+// Définition servos
+Servo ServoRTete; // Rotation de la tête
+Servo ServoITete; //Inclinaison tête
+Servo ServoIYeux; // Inclinaison des yeux
+Servo ServoRYeux; // Rotation des yeux
+Servo ServoFYeux; // Fermeture des paupières
+Servo ServoOBoucheB; // Lèvre bas
+Servo ServoOBoucheH; // Lèvre haut
+
+
+// Écran
 const int tps = 150;
 
-LiquidCrystal_I2C lcd(0x27, 20, 4);
+LiquidCrystal_I2C lcd(0x27, 20, 4); // Définition des pins de communication entre l'écran et l'Arduino (20 (Data), 21 (Fréquence))
 
 byte pacman[] = {
   B00000,
@@ -47,17 +87,31 @@ byte clear[] = {
 
 void setup() {
 
-  pinMode(7, OUTPUT); // Trigger HC-SR04
-  pinMode(6, INPUT); // Echo HC-SR04
-  pinMode(8, OUTPUT); // Led Power
-  pinMode(9, OUTPUT); // Led Statut
-  pinMode(5, OUTPUT); // Led DEBUG
-  pinMode(4, OUTPUT); //Buzzer
+  // Définifition des pinModes
+  //HC-SR04
+  pinMode(PinHCTrigger, OUTPUT); // Trigger HC-SR04
+  pinMode(PinHCEcho, INPUT); // Echo HC-SR04
+  //LEDS
+  pinMode(PinLedPower, OUTPUT); // Led Power
+  pinMode(PinLedStatus, OUTPUT); // Led Statut
+  pinMode(PinLedDebug, OUTPUT); // Led DEBUG
+  //Autres
+  pinMode(PinBuzzer, OUTPUT); //Buzzer
 
-  servo1.attach(3);
+
+  // Lien pins avec les servos
+  ServoRTete.attach(PinSRTete);
+  ServoITete.attach(PinSITete);
+  ServoIYeux.attach(PinSIYeux);
+  ServoRYeux.attach(PinSRYeux);
+  ServoFYeux.attach(PinSFYeux);
+  ServoOBoucheB.attach(PinSOBoucheB);
+  ServoOBoucheH.attach(PinSOBoucheH);
   
-  digitalWrite(8, HIGH);
+  digitalWrite(PinLedPower, HIGH); // Allumage Led Power
 
+
+// Démarrage de l'écran
   lcd.init();
   lcd.backlight();
   lcd.createChar(1, pacman);
@@ -80,11 +134,21 @@ void setup() {
   lcd.write((byte)2);
   lcd.setCursor(13,1);
   lcd.write((byte)2);
-  Serial.begin(1200); // Lancement moniteur série
-  Serial.print("Chargement termine !"); // Annonce fin du chargement
-  servo1.write(60);
+
+
+  Serial.begin(1200); // Lancement moniteur série pour débug
+  Serial.print("Chargement termine !"); // Annonce fin du chargement sur le serial
+
+  // Initialisation de la position des servos
+  ServoRTete.write(60);
+  ServoITete.write();
+  ServoIYeux.write();
+  ServoRYeux.write();
+  ServoFYeux.write();
+  ServoOBoucheB.write();
+  ServoOBoucheH.write();
   
-  delay(1000);
+  delay(500);
   
    
   for(int i = 1; i < 14; i++)
@@ -112,6 +176,7 @@ void setup() {
 }
 
  
+// Définition du pouce en l'air une fois le chargement fini
 void thumbsup() {
  byte thumb1[8] = {B00100,B00011,B00100,B00011,B00100,B00011,B00010,B00001};
  byte thumb2[8] = {B00000,B00000,B00000,B00000,B00000,B00000,B00000,B00011};
@@ -139,6 +204,8 @@ void thumbsup() {
  lcd.write((byte)9);
 }
 
+
+// Définition de l'affichage "système démarré" de l'écran
 void systemop() {
   
   lcd.home();

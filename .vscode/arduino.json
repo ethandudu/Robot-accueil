@@ -1,4 +1,5 @@
 {
     "board": "arduino:avr:mega",
-    "configuration": "cpu=atmega2560"
+    "configuration": "cpu=atmega2560",
+    "programmer": "arduino:avrisp"
 }
