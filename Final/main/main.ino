@@ -1,7 +1,7 @@
 /*
 
 Programme réalisé par les STI2D B, plus d'infos sur le github du projet : https://github.com/ethandudu/Robot-Accueil
-
+ Note : Servo : if value is < 200 its treated as an angle, otherwise as pulse width in microseconds
 */
 
 
@@ -29,12 +29,12 @@ int PinHCEcho = 6;
 
 // Définition pins servos             Pin = Pin, S = Servo-moteur, R= Rotation, O = Ouverture, B = Bas, H = Haut, I = Inclinaison, F = Fermeture
 int PinSRTete = 3; // Rotation de la tête
-int PinSITete = ; //Inclinaison tête
-int PinSIYeux = ; // Inclinaison des yeux
-int PinSRYeux = ; // Rotation des yeux
-int PinSFYeux = ; // Fermeture des paupières
-int PinSOBoucheB = ; // Lèvre bas
-int PinSOBoucheH = ; // Lèvre haut
+int PinSITete = 10; //Inclinaison tête
+int PinSIYeux = 11; // Inclinaison des yeux
+int PinSRYeux = 12; // Rotation des yeux
+int PinSFYeux = 13; // Fermeture des paupières
+int PinSOBoucheB = 14; // Lèvre bas
+int PinSOBoucheH = 15; // Lèvre haut
 
 
 // Définition servos
@@ -50,6 +50,7 @@ Servo ServoOBoucheH; // Lèvre haut
 // Variables pour le HC-SR04
 long lecho; // Variable de lecture de l'echo
 long cm; // Variable pour passer en cm
+
 
 // Écran
 const int tps = 150;
@@ -92,6 +93,10 @@ byte clear[] = {
 
 void setup()
 {
+  // Initialisation Serial
+  Serial.begin(1200); // Lancement moniteur série pour débug
+  Serial.print("Chargement termine !"); // Annonce fin du chargement sur le serial
+
 
   // Définifition des pinModes
   //HC-SR04
@@ -142,19 +147,14 @@ void setup()
   lcd.write((byte)2);
 
 
-  // Debug via serial
-  Serial.begin(1200); // Lancement moniteur série pour débug
-  Serial.print("Chargement termine !"); // Annonce fin du chargement sur le serial
-
-
   // Initialisation de la position des servos
   ServoRTete.write(60);
-  ServoITete.write();
-  ServoIYeux.write();
-  ServoRYeux.write();
-  ServoFYeux.write();
-  ServoOBoucheB.write();
-  ServoOBoucheH.write();
+  ServoITete.write(60);
+  ServoIYeux.write(60);
+  ServoRYeux.write(60);
+  ServoFYeux.write(60);
+  ServoOBoucheB.write(60);
+  ServoOBoucheH.write(60);
   
   delay(500);
   
