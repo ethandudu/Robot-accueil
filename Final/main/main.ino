@@ -113,8 +113,8 @@ byte clear[] = {
 void setup()
 {
   // Initialisation Serial
-  Serial.begin(1200); // Lancement moniteur série pour débug                                A désactiver une fois fini pour opti
-  Serial.print("Chargement termine !"); // Annonce fin du chargement sur le serial
+  //Serial.begin(1200); // Lancement moniteur série pour débug                                A désactiver une fois fini pour opti
+  //Serial.print("Chargement termine !"); // Annonce fin du chargement sur le serial
 
 
   // Définifition des pinModes
