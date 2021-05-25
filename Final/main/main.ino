@@ -1,8 +1,8 @@
-/**
+/*
 
 Programme réalisé par les STI2D B, plus d'infos sur le github du projet : https://github.com/ethandudu/Robot-Accueil
 
-**/
+*/
 
 
 //Définition des librairies à utiliser
@@ -10,6 +10,7 @@ Programme réalisé par les STI2D B, plus d'infos sur le github du projet : http
 #include <Wire.h> // Shield de l'écran
 #include "pitches.h" // Notes du buzzer
 #include <Servo.h> // Servo moteurs
+
 
 // Définition pins autres
 int PinBuzzer = 4;
@@ -45,6 +46,10 @@ Servo ServoFYeux; // Fermeture des paupières
 Servo ServoOBoucheB; // Lèvre bas
 Servo ServoOBoucheH; // Lèvre haut
 
+
+// Variables pour le HC-SR04
+long lecho; // Variable de lecture de l'echo
+long cm; // Variable pour passer en cm
 
 // Écran
 const int tps = 150;
@@ -85,7 +90,8 @@ byte clear[] = {
 };
 
 
-void setup() {
+void setup()
+{
 
   // Définifition des pinModes
   //HC-SR04
@@ -111,7 +117,7 @@ void setup() {
   digitalWrite(PinLedPower, HIGH); // Allumage Led Power
 
 
-// Démarrage de l'écran
+  // Démarrage de l'écran
   lcd.init();
   lcd.backlight();
   lcd.createChar(1, pacman);
@@ -136,8 +142,10 @@ void setup() {
   lcd.write((byte)2);
 
 
+  // Debug via serial
   Serial.begin(1200); // Lancement moniteur série pour débug
   Serial.print("Chargement termine !"); // Annonce fin du chargement sur le serial
+
 
   // Initialisation de la position des servos
   ServoRTete.write(60);
@@ -166,8 +174,8 @@ void setup() {
  
   thumbsup();
   
-  digitalWrite(8, LOW);
-  digitalWrite(9, HIGH);
+  //digitalWrite(PinLedPower, LOW); // Reste désormais active
+  digitalWrite(PinLedStatus, HIGH); // Allume la LED verte
   
   delay(1000);
   
@@ -177,7 +185,8 @@ void setup() {
 
  
 // Définition du pouce en l'air une fois le chargement fini
-void thumbsup() {
+void thumbsup()
+{
  byte thumb1[8] = {B00100,B00011,B00100,B00011,B00100,B00011,B00010,B00001};
  byte thumb2[8] = {B00000,B00000,B00000,B00000,B00000,B00000,B00000,B00011};
  byte thumb3[8] = {B00000,B00000,B00000,B00000,B00000,B00000,B00001,B11110};
@@ -205,42 +214,41 @@ void thumbsup() {
 }
 
 
-// Définition de l'affichage "système démarré" de l'écran
-void systemop() {
-  
+// Définition de l'affichage "système démarré" de l'écran + Welcoming musical
+void systemop()
+{
   lcd.home();
-  
   lcd.setCursor(5,0);
   lcd.print("Systeme");
   lcd.setCursor(5,1);
   lcd.print("demarre");
-  delay(1000);
-  tone(4, NOTE_A2, 200);
+  tone(PinBuzzer, NOTE_A2, 200);
   delay(500);
-  tone(4, NOTE_A2, 200);
+  tone(PinBuzzer, NOTE_A2, 200);
+  delay(1000);
   lcd.clear();
 }
-
-long lecho; // Variable de lecture de l'echo
-long cm; // Variable pour passer en cm
 
 void loop()
 {
   // Capteur ultrason
-  digitalWrite(7, HIGH); // Activation Trigger HC-SR04
+  digitalWrite(PinHCTrigger, HIGH); // Activation Trigger HC-SR04
   delay(10); // Attente de 10ms
-  digitalWrite(7, LOW); // Désactivation Trigger HC-SR04
-  lecho = pulseIn(6, HIGH); //Récupération Echo
+  digitalWrite(PinHCTrigger, LOW); // Désactivation Trigger HC-SR04
+  lecho = pulseIn(PinHCEcho, HIGH); //Récupération Echo
+  // Peut être une opti en rajoutant digitalWrite(PinHCEcho, LOW) car jamais désactivé ?
   cm = lecho /58; // Conversion Echo en cm
-  Serial.println(cm);
-  loop2();
+  //Serial.println(cm); Debug avec affichage de la distance en serial
+  activation();
 }
 
-void loop2()
+void activation()
 {
-  if (cm <= 15) {// Distance d'activation
+  if (cm <= 15) // Distance d'activation
+  {
+  
   //delay(500);
-    digitalWrite(5, HIGH);
+    digitalWrite(PinLedDebug, HIGH); // Activation LED détection
     lcd.setCursor(4,0);
     lcd.print ("BONJOUR,");
     delay(1000);
@@ -251,7 +259,9 @@ void loop2()
     delay(1000);
     lcd.clear();
   }
-  else {
-    digitalWrite(5, LOW);
+  else
+  {
+    digitalWrite(PinLedDebug, LOW); // Désactivation LED détection
   }
+
 }
