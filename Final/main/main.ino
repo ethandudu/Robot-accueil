@@ -12,6 +12,25 @@ Programme réalisé par les STI2D B, plus d'infos sur le github du projet : http
 #include <Servo.h> // Servo moteurs
 
 
+// Définition des angles des servos         E = Activé, D = Désactivé, A = Angle
+// Enable
+int AEServoRTete = 91;
+int AEServoITete = 45;
+int AEServoIYeux = 0; //?
+int AEServoRYeux = 0; //?
+int AEServoFYeux = 0; //?
+int AEServoOBoucheB = 0; //?
+int AEServoOBoucheH = 0; //?
+
+// Disable        Pas d'angle pour la rotation de la tête car ne bouge pas
+int DEServoITete = 60;
+int DEServoIYeux = 0; //?
+int DEServoRYeux = 0; //?
+int DEServoFYeux = 0; //?
+int DEServoOBoucheB = 0; //?
+int DEServoOBoucheH = 0; //?
+
+
 // Définition pins autres
 int PinBuzzer = 4;
 
@@ -29,12 +48,12 @@ int PinHCEcho = 6;
 
 // Définition pins servos             Pin = Pin, S = Servo-moteur, R= Rotation, O = Ouverture, B = Bas, H = Haut, I = Inclinaison, F = Fermeture
 int PinSRTete = 3; // Rotation de la tête
-int PinSITete = 10; //Inclinaison tête
-int PinSIYeux = 11; // Inclinaison des yeux
-int PinSRYeux = 12; // Rotation des yeux
-int PinSFYeux = 13; // Fermeture des paupières
-int PinSOBoucheB = 14; // Lèvre bas
-int PinSOBoucheH = 15; // Lèvre haut
+int PinSITete = 10; //Inclinaison tête //?
+int PinSIYeux = 11; // Inclinaison des yeux //?
+int PinSRYeux = 12; // Rotation des yeux //?
+int PinSFYeux = 13; // Fermeture des paupières //?
+int PinSOBoucheB = 14; // Lèvre bas //?
+int PinSOBoucheH = 15; // Lèvre haut //?
 
 
 // Définition servos
@@ -53,7 +72,7 @@ long cm; // Variable pour passer en cm
 
 
 // Écran
-const int tps = 150;
+const int tps = 150; // temps d'attente pour l'écran en ms
 
 LiquidCrystal_I2C lcd(0x27, 20, 4); // Définition des pins de communication entre l'écran et l'Arduino (20 (Data), 21 (Fréquence))
 
@@ -94,7 +113,7 @@ byte clear[] = {
 void setup()
 {
   // Initialisation Serial
-  Serial.begin(1200); // Lancement moniteur série pour débug
+  Serial.begin(1200); // Lancement moniteur série pour débug                                A désactiver une fois fini pour opti
   Serial.print("Chargement termine !"); // Annonce fin du chargement sur le serial
 
 
@@ -148,13 +167,13 @@ void setup()
 
 
   // Initialisation de la position des servos
-  ServoRTete.write(60);
-  ServoITete.write(60);
-  ServoIYeux.write(60);
-  ServoRYeux.write(60);
-  ServoFYeux.write(60);
-  ServoOBoucheB.write(60);
-  ServoOBoucheH.write(60);
+  ServoRTete.write(AEServoRTete);
+  ServoITete.write(45);
+  ServoIYeux.write(60); //?
+  ServoRYeux.write(60); //?
+  ServoFYeux.write(60); //?
+  ServoOBoucheB.write(60); //?
+  ServoOBoucheH.write(60); //?
   
   delay(500);
   
@@ -231,7 +250,13 @@ void systemop()
 
 void loop()
 {
-  // Capteur ultrason
+  detection(); //              OOOOOPTIIIIMIIIISAAATIOOON
+  activation();
+}
+
+
+void detection() //Utilisation du HC-SR04
+{
   digitalWrite(PinHCTrigger, HIGH); // Activation Trigger HC-SR04
   delay(10); // Attente de 10ms
   digitalWrite(PinHCTrigger, LOW); // Désactivation Trigger HC-SR04
@@ -239,14 +264,14 @@ void loop()
   // Peut être une opti en rajoutant digitalWrite(PinHCEcho, LOW) car jamais désactivé ?
   cm = lecho /58; // Conversion Echo en cm
   //Serial.println(cm); Debug avec affichage de la distance en serial
-  activation();
 }
 
+
+// Lecture de la distance et affichage ou non d'un message sur l'écran + activation LED
 void activation()
 {
-  if (cm <= 15) // Distance d'activation
+  if (cm <= 25) // Distance d'activation
   {
-  
   //delay(500);
     digitalWrite(PinLedDebug, HIGH); // Activation LED détection
     lcd.setCursor(4,0);
@@ -262,6 +287,7 @@ void activation()
   else
   {
     digitalWrite(PinLedDebug, LOW); // Désactivation LED détection
+    
   }
 
 }
