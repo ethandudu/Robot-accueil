@@ -1,6 +1,11 @@
 #include <LiquidCrystal_I2C.h>
 #include <Wire.h>
 #include "pitches.h"
+#include <Servo.h>
+
+//Définition pins servos
+int P1 = 3;
+Servo servo1;
 
 const int tps = 150;
 
@@ -48,6 +53,8 @@ void setup() {
   pinMode(9, OUTPUT); // Led Statut
   pinMode(5, OUTPUT); // Led DEBUG
   pinMode(4, OUTPUT); //Buzzer
+
+  servo1.attach(3);
   
   digitalWrite(8, HIGH);
 
@@ -75,6 +82,7 @@ void setup() {
   lcd.write((byte)2);
   Serial.begin(1200); // Lancement moniteur série
   Serial.print("Chargement termine !"); // Annonce fin du chargement
+  servo1.write(60);
   
   delay(1000);
   
