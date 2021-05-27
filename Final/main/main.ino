@@ -14,21 +14,21 @@ Programme réalisé par la STI2D B, plus d'infos sur le github du projet : https
 
 // Définition des angles des servos         E = Activé, D = Désactivé, A = Angle
 // Enable
-int AEServoRTete = 91;
-int AEServoITete = 45;
-int AEServoIYeux = 0; //?
-int AEServoRYeux = 0; //?
-int AEServoFYeux = 0; //?
-int AEServoOBoucheB = 0; //?
-int AEServoOBoucheH = 0; //?
+int AEServoRTete = 91; // OK
+int AEServoITete = 45; // OK
+int AEServoIYeux = 10; //?
+int AEServoRYeux = 10; //?
+int AEServoFYeux = 70; // OK
+int AEServoOBoucheB = 90; //?
+int AEServoOBoucheH = 90; //?
 
 // Disable         Pas d'angle pour la rotation de la tête car ne bouge pas
-int DEServoITete = 60;
-int DEServoIYeux = 0; //?
-int DEServoRYeux = 0; //?
-int DEServoFYeux = 0; //?
-int DEServoOBoucheB = 0; //?
-int DEServoOBoucheH = 0; //?
+int DEServoITete = 90; // OK
+int DEServoIYeux = 70; //?
+int DEServoRYeux = 70; //?
+int DEServoFYeux = 10; // OK
+int DEServoOBoucheB = 70; //?
+int DEServoOBoucheH = 70; //?
 
 
 // Définition pins autres
@@ -48,12 +48,12 @@ int PinHCEcho = 6;
 
 // Définition pins servos             Pin = Pin, S = Servo-moteur, R= Rotation, O = Ouverture, B = Bas, H = Haut, I = Inclinaison, F = Fermeture
 int PinSRTete = 3; // Rotation de la tête
-int PinSITete = 10; //Inclinaison tête //?
-int PinSIYeux = 11; // Inclinaison des yeux //?
-int PinSRYeux = 12; // Rotation des yeux //?
-int PinSFYeux = 13; // Fermeture des paupières //?
-int PinSOBoucheB = 14; // Lèvre bas //?
-int PinSOBoucheH = 15; // Lèvre haut //?
+int PinSITete = 17; //Inclinaison tête 
+int PinSIYeux = 16; // Inclinaison des yeux 
+int PinSRYeux = 15; // Rotation des yeux 
+int PinSFYeux = 14; // Fermeture des paupières
+int PinSOBoucheB = 18; // Lèvre bas //?
+int PinSOBoucheH = 19; // Lèvre haut //?
 
 
 // Définition servos
@@ -142,9 +142,9 @@ void setup()
 
 
   // Indication sonore
-  tone(PinBuzzer, NOTE_D4, 500);
-  delay(100);
-  tone(PinBuzzer, NOTE_D4, 500);
+  tone(PinBuzzer, NOTE_D4, 300);
+  delay(500);
+  tone(PinBuzzer, NOTE_D4, 300);
   // Démarrage de l'écran
   lcd.init();
   lcd.backlight();
@@ -172,12 +172,19 @@ void setup()
 
   // Initialisation de la position des servos
   ServoRTete.write(AEServoRTete);
+  delay(200); /*
   ServoITete.write(AEServoITete);
+  delay(1000);
   ServoIYeux.write(AEServoIYeux);
+  delay(1000);
   ServoRYeux.write(AEServoRYeux);
+  delay(1000);
   ServoFYeux.write(AEServoFYeux);
+  delay(1000);
   ServoOBoucheB.write(AEServoOBoucheB);
+  delay(1000);
   ServoOBoucheH.write(AEServoOBoucheH);
+  delay(1000); */
   
   delay(500);
   
@@ -247,9 +254,9 @@ void systemop()
   lcd.print("demarre");
   // Welcoming sonore
   tone(PinBuzzer, NOTE_G4, 200);
-  delay(10);
+  delay(400);
   tone(PinBuzzer, NOTE_A4, 200);
-  delay(10);
+  delay(400);
   tone(PinBuzzer, NOTE_B4, 200);
   delay(1000);
   lcd.clear();
@@ -277,17 +284,21 @@ void detection() //Utilisation du HC-SR04
 // Lecture de la distance et affichage ou non d'un message sur l'écran + activation LED
 void activation()
 {
-  if (cm <= 25) // Distance d'activation
+  if (cm <= 15) // Distance d'activation
   {
   //delay(500);
     digitalWrite(PinLedDebug, HIGH); // Activation LED détection
     // Positionnement des servos en actif
-    ServoRTete.write(AEServoRTete);
     ServoITete.write(AEServoITete);
+    delay(200);
     ServoIYeux.write(AEServoIYeux);
+    delay(200);
     ServoRYeux.write(AEServoRYeux);
+    delay(200);
     ServoFYeux.write(AEServoFYeux);
+    delay(200);
     ServoOBoucheB.write(AEServoOBoucheB);
+    delay(200);
     ServoOBoucheH.write(AEServoOBoucheH);
     // Affichage sur l'écran
     lcd.setCursor(4,0);
@@ -304,10 +315,15 @@ void activation()
   {
     // Positionnement des servos en repos
     ServoITete.write(DEServoITete);
+    delay(200);
     ServoIYeux.write(DEServoIYeux);
+    delay(200);
     ServoRYeux.write(DEServoRYeux);
+    delay(200);
     ServoFYeux.write(DEServoFYeux);
+    delay(200);
     ServoOBoucheB.write(DEServoOBoucheB);
+    delay(200);
     ServoOBoucheH.write(DEServoOBoucheH);
     digitalWrite(PinLedDebug, LOW); // Désactivation LED détection
   }
