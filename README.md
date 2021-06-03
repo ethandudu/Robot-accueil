@@ -8,7 +8,7 @@ La modification de ce robot est notre projet d'innovation technologique et d'ing
 
 ## Credits
 * Ethan D. ; Damien C. ; Bilal B. ; Théo A. ; Yacine B. ; Léandro C.
-* [Script de démarrage "Pacman"](https://www.tinkercad.com/things/8Txmi3q0drQ) : Baptiste P. sur Tinkercad
+* Script de démarrage "Pacman" [Tinkercad](https://www.tinkercad.com/things/8Txmi3q0drQ) ou [Github](https://github.com/Hathek/Si-miniprojet/blob/main/LCD/demarrage/demarrage.ino) : Baptiste P.
 * La documentation est la propriété de nos professeurs.
 
 ## Licence
